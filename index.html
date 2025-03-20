@@ -8,16 +8,16 @@
 </head>
 <body>
 
-        <label>Nombre completo:</label> <input  id="nombre" onchange="validarNombre(e)" type="text">
+        <label>Nombre completo:</label> <input  id="nombre" onchange="validarNombre(nombre)" type="text">
         <p id="mensaje"></p>
 
-        <label>Email:</label> <input id="email" onchange="validarMail(e)" type="text">
+        <label>Email:</label> <input id="email" onchange="validarMail(email)" type="text">
         <p id="mensaje"></p>
 
-        <label>Contraseña (tiene que tener un minimo de 8 caracteres, un numero y una letra):</label> <input id="contra" onchange="validarContra(e)" type="password">
+        <label>Contraseña (tiene que tener un minimo de 8 caracteres, un numero y una letra):</label> <input id="contra" onchange="validarContra(contra)" type="password">
         <p id="mensaje"></p>
 
-        <label>Confirmar contraseña:</label> <input id="confContra" onchange="validarConfContra(e)" type="password">
+        <label>Confirmar contraseña:</label> <input id="confContra" onchange="validarConfContra(confContra)" type="password">
         <p id="mensaje"></p>
 
         <input type="submit" name="Enviar">

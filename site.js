@@ -4,11 +4,15 @@ let inputContra = document.getElementById('contra');
 let inputConfContra = document.getElementById('confContra');
 let mensaje = document.getElementById('mensaje')
 
+
+
 function validarNombre(inputNombre){
 
+    console.log(inputNombre.value)
     if(inputNombre < 3){
         
         mensaje.innerHTML = "El nombre es inválido"
+        console.log("invalido")
     }
 }
 
@@ -22,5 +26,10 @@ function validarMail(inputEmail){
         
         mensaje.innerHTML = "El formato del mail es inválido"
     } 
+}
+
+function validarContra(inputContra){
+
+    if(inputContra.value >= 8 && inputContra.value.includes)
 }
     
