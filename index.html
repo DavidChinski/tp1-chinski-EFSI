@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP EFSI</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+        <label>Nombre completo:</label> <input  id="nombre" onchange="validarNombre(e)" type="text">
+        <p id="mensaje"></p>
+
+        <label>Email:</label> <input id="email" onchange="validarMail(e)" type="text">
+        <p id="mensaje"></p>
+
+        <label>Contraseña (tiene que tener un minimo de 8 caracteres, un numero y una letra):</label> <input id="contra" onchange="validarContra(e)" type="password">
+        <p id="mensaje"></p>
+
+        <label>Confirmar contraseña:</label> <input id="confContra" onchange="validarConfContra(e)" type="password">
+        <p id="mensaje"></p>
+
+        <input type="submit" name="Enviar">
+    
+    <script src="site.js"></script>
+</body>
+</html>
