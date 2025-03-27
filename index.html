@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP EFSI</title>
+    <title>tp efsi</title>
     <link rel="stylesheet" href="site.css">
 </head>
 <body>
+    <div class="container">
+        <h2>Registro</h2>
+        <form>
+            <label>Nombre completo:</label>
+            <input id="nombre" type="text" autocomplete="off">
+            <p class="mensaje" id="mensajeNombre"></p>
 
-        <label>Nombre completo:</label> 
-        <input  id="nombre" oninput="validarNombre()" type="text" autocomplete="off">
-        <p id="mensajeNombre"></p>
+            <label>Email:</label>
+            <input id="email" type="text" autocomplete="off">
+            <p class="mensaje" id="mensajeEmail"></p>
 
-        <label>Email:</label> 
-        <input id="email" oninput="validarMail()" type="text" autocomplete="off">
-        <p id="mensajeEmail"></p>
+            <label>Contraseña:</label>
+            <input id="contra" type="password" autocomplete="off">
+            <p class="mensaje" id="mensajeContra"></p>
 
-        <label>Contraseña (tiene que tener un minimo de 8 caracteres, un numero y una letra):</label> 
-        <input id="contra" oninput="validarContra()" type="password" autocomplete="off">
-        <p id="mensajeContra"></p>
+            <label>Confirmar contraseña:</label>
+            <input id="confContra" type="password" autocomplete="off">
+            <p class="mensaje" id="mensajeConfContra"></p>
 
-        <label>Confirmar contraseña:</label> 
-        <input id="confContra" oninput="validarConfContra()" type="password" autocomplete="off">
-        <p id="mensajeConfContra"></p>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
-        <input type="submit" name="Enviar">
-    
     <script src="site.js"></script>
 </body>
 </html>

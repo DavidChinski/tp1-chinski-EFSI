@@ -11,22 +11,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function validarNombre() {
         if (inputNombre.value.length < 3) {
-            mensajeNombre.innerHTML = "El nombre debe tener al menos 3 caracteres.";
-            
+            mensajeNombre.textContent = "El nombre debe tener al menos 3 caracteres.";
+            mensajeNombre.style.color = "red";
+            return false;
         } else {
-            mensajeNombre.innerHTML = "Nombre válido";
-            
+            mensajeNombre.textContent = "";
+            return true;
         }
     }
 
     function validarEmail() {
         const patron = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!patron.test(inputEmail.value)) {
-            mensajeEmail.innerHTML = "El formato del email es inválido.";
-           
+            mensajeEmail.textContent = "El formato del email es inválido.";
+            mensajeEmail.style.color = "red";
+            return false;
         } else {
-            mensajeEmail.innerHTML = "Email válido";
-           
+            mensajeEmail.textContent = "";
+            return true;
         }
     }
 
@@ -35,22 +37,23 @@ document.addEventListener("DOMContentLoaded", function () {
         let tieneLetra = /[a-zA-Z]/.test(inputContra.value);
 
         if (inputContra.value.length < 8 || !tieneNumero || !tieneLetra) {
-            mensajeContra.innerHTML = "La contraseña debe tener al menos 8 caracteres, un número y una letra.";
-           
+            mensajeContra.textContent = "Debe tener al menos 8 caracteres, un número y una letra.";
+            mensajeContra.style.color = "red";
+            return false;
         } else {
-            mensajeContra.innerHTML = "Contraseña válida";
-           
+            mensajeContra.textContent = "";
+            return true;
         }
-        validarConfContra();
     }
 
     function validarConfContra() {
         if (inputConfContra.value !== inputContra.value) {
-            mensajeConfContra.innerHTML = "Las contraseñas no coinciden.";
-           
+            mensajeConfContra.textContent = "Las contraseñas no coinciden.";
+            mensajeConfContra.style.color = "red";
+            return false;
         } else {
-            mensajeConfContra.innerHTML = "Contraseñas coinciden";
-         
+            mensajeConfContra.textContent = "";
+            return true;
         }
     }
 
@@ -58,4 +61,5 @@ document.addEventListener("DOMContentLoaded", function () {
     inputEmail.addEventListener("input", validarEmail);
     inputContra.addEventListener("input", validarContra);
     inputConfContra.addEventListener("input", validarConfContra);
+
 });
